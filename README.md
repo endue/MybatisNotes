@@ -1,1 +1,15 @@
 # mybatis
+## 环境搭建
+1. Demo
+## 容器初始化
+1. XMLConfigBuilder
+   - 解析properties标签
+   - 解析typeAliases标签
+   - 解析plugins标签
+   - 解析objectFactory标签
+   - 解析objectWrapperFactory标签
+   - 解析settings标签
+   - 解析environments标签
+   - 解析databaseIdProvider标签
+   - 解析typeHandlers标签
+   - 解析mappers标签
