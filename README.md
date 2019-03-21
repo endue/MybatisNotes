@@ -1,6 +1,6 @@
 # mybatis
 ## 环境搭建
-1. Demo
+1. [Demo](https://github.com/endue/MybatisNotes/tree/master/demo)
 ## 容器初始化
 1. XMLConfigBuilder
    - 解析properties标签
