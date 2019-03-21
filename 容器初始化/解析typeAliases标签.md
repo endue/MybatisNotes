@@ -129,4 +129,4 @@ try {
 ```
 
 **此时配置的typeAliases标签下的内容，已经加载到configuration.typeAliasRegistry.TYPE_ALIASES中。至此，我们可以在mybatis的xml中
-可以不使用全路径包名来制定某个类，可以直接使用别名**
+可以不使用全路径包名来指定某个类，可以直接使用别名**
