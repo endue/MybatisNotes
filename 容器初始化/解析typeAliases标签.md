@@ -34,7 +34,6 @@ private void typeAliasesElement(XNode parent) {
 	}
 }
 ```
-**此时所有的typeAliases下的配置都加载到BaseBuilder.configuration.typeAliasRegistry属性中**
 
 ###### typeAliases标签下两种配置方式分析
 ```xml
