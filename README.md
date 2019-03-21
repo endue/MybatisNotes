@@ -1,7 +1,7 @@
 # mybatis
 ## 环境搭建
 1. [Demo](https://github.com/endue/MybatisNotes/tree/master/demo)
-## [容器初始化](https://github.com/endue/MybatisNotes/tree/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96)
+## 容器初始化
 1. XMLConfigBuilder
    - [解析properties标签](https://github.com/endue/MybatisNotes/blob/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/%E8%A7%A3%E6%9E%90properties%E6%A0%87%E7%AD%BE.md)
    - [解析typeAliases标签](https://github.com/endue/MybatisNotes/blob/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/%E8%A7%A3%E6%9E%90typeAliases%E6%A0%87%E7%AD%BE.md)
