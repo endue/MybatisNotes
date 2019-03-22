@@ -9,6 +9,7 @@ public class Book {
 
     private Integer id;
     private String name;
+    private Integer price;
 
     public Integer getId() {
         return id;
@@ -26,12 +27,20 @@ public class Book {
         this.name = name;
     }
 
+    public Integer getPrice() {
+        return price;
+    }
+
+    public void setPrice(Integer price) {
+        this.price = price;
+    }
 
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", name='" + name +
+                ", name='" + name + '\'' +
+                ", price=" + price +
                 '}';
     }
 }

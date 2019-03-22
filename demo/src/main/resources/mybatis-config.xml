@@ -21,6 +21,10 @@
         <typeHandler handler="com.demo.typehandler.MyTypeHandlers" jdbcType="VARCHAR" javaType="java.lang.String"/>
     </typeHandlers>-->
 
+    <objectFactory type="com.simon.objectfactory.MyObjectFactory">
+        <!--<property name="price" value="100"></property>-->
+    </objectFactory>
+
   <!--  <plugins>
         <plugin interceptor="com.demo.interceptor.MyInterceptor"></plugin>
     </plugins>-->
