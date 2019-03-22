@@ -25,6 +25,8 @@
         <!--<property name="price" value="100"></property>-->
     </objectFactory>
 
+    <objectWrapperFactory type="com.simon.objectWrapperFactory.MyObjectWrapperFactory"/>
+
   <!--  <plugins>
         <plugin interceptor="com.demo.interceptor.MyInterceptor"></plugin>
     </plugins>-->
