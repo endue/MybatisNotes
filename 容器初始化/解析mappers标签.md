@@ -134,11 +134,13 @@ public void parse() {
 	//包含说明解析过则跳过
 	if (!configuration.isResourceLoaded(resource)) {
 		//解析解析对应的xml文件
+		//-----先解析xml方式的配置
 		loadXmlResource();
 		//将当前接口类放入到configuration.loadedResources中
 		configuration.addLoadedResource(resource);
 		//设置MapperAnnotationBuilder.assistant.currentNamespace
 		assistant.setCurrentNamespace(type.getName());
+		//-----再解析注解方式的配置
 		//解析cache和cache-ref缓存标签
 		parseCache();
 		parseCacheRef();
