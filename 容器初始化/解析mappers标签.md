@@ -239,5 +239,5 @@ public Cache useCacheRef(String namespace) {
 }
 ```
 
-*****class方式同package方式。url和resource相同。所有的都方式都是想通的**
+**class方式同package方式。url和resource相同。所有的都方式都是想通的**
 
