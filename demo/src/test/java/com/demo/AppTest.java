@@ -2,7 +2,9 @@ package com.demo;
 
 import com.demo.dao.BookDao;
 import com.demo.entity.Book;
+import com.demo.page.Page;
 import com.demo.service.BookService;
+import org.apache.ibatis.session.RowBounds;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -23,9 +25,11 @@ public class AppTest {
 
     @Test
     public void insertTest(){
-        Book b = new Book();
-        b.setName("自然");
-        bookDao.insert(b);
+        for(int i = 0;i<500;i++){
+            Book b = new Book();
+            b.setName("自然"+i);
+            bookDao.insert(b);
+        }
     }
 
     @Test
@@ -47,5 +51,16 @@ public class AppTest {
             list.add(b);
         }
         bookDao.insertAll(list);
+    }
+
+    @Test
+    public void queryForPageTest(){
+        Page page = new Page();
+        page.setPageSize(10);
+        for(int i = 1;i<11;i++){
+            page.setPageNo(i);
+            List<Book> list = bookDao.queryForPage(page);
+            System.out.println(list);
+        }
     }
 }

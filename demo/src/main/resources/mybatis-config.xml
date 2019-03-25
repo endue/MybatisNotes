@@ -21,15 +21,15 @@
         <typeHandler handler="com.demo.typehandler.MyTypeHandlers" jdbcType="VARCHAR" javaType="java.lang.String"/>
     </typeHandlers>-->
 
-    <objectFactory type="com.simon.objectfactory.MyObjectFactory">
+    <objectFactory type="com.demo.objectfactory.MyObjectFactory">
         <!--<property name="price" value="100"></property>-->
     </objectFactory>
 
-    <objectWrapperFactory type="com.simon.objectWrapperFactory.MyObjectWrapperFactory"/>
+    <objectWrapperFactory type="com.demo.objectWrapperFactory.MyObjectWrapperFactory"/>
 
-  <!--  <plugins>
-        <plugin interceptor="com.demo.interceptor.MyInterceptor"></plugin>
-    </plugins>-->
+    <plugins>
+        <plugin interceptor="com.demo.interceptor.PageInterceptor"></plugin>
+    </plugins>
 
     <!--多个environment时，获取同environments的default值相同得environment-->
     <environments default="development">

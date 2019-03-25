@@ -5,7 +5,7 @@ package com.demo.entity;
  * @Description:
  * @Date: 2018/9/6.
  */
-public class Book {
+public class Book{
 
     private Integer id;
     private String name;

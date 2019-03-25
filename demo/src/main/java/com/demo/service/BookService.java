@@ -3,6 +3,7 @@ package com.demo.service;
 import com.demo.dao.BookDao;
 import com.demo.entity.Book;
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
@@ -101,5 +102,20 @@ public class BookService implements BookDao {
         }finally {
             sqlSession.close();
         }
+    }
+
+    @Override
+    public List<Book> queryForPage(RowBounds rowBounds) {
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        List<Book> list = null;
+        try {
+            list = sqlSession.selectList("bookNameSpace.queryForPage",Book.class,rowBounds);
+            sqlSession.commit();
+        }catch (Exception e){
+            sqlSession.rollback();
+        }finally {
+            sqlSession.close();
+        }
+        return list;
     }
 }

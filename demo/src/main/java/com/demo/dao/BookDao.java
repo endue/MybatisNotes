@@ -2,6 +2,7 @@ package com.demo.dao;
 
 
 import com.demo.entity.Book;
+import org.apache.ibatis.session.RowBounds;
 
 import java.util.List;
 
@@ -21,4 +22,6 @@ public interface BookDao {
     int count();
 
     void insertAll(List<Book> books);
+
+    List<Book> queryForPage(RowBounds rowBounds);
 }

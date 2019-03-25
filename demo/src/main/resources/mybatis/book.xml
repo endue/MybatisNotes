@@ -35,4 +35,9 @@
     <select id="count" resultType="integer" >
         SELECT count(1) FROM book
     </select>
+
+    <select id="queryForPage" resultMap="BaseResultMap1">
+        SELECT id,name
+        from book
+    </select>
 </mapper>
