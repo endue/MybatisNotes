@@ -13,3 +13,6 @@
    - [解析databaseIdProvider标签](https://github.com/endue/MybatisNotes/blob/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/%E8%A7%A3%E6%9E%90databaseIdProvider%E6%A0%87%E7%AD%BE.md)
    - [解析typeHandlers标签](https://github.com/endue/MybatisNotes/blob/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/%E8%A7%A3%E6%9E%90typeHandlers%E6%A0%87%E7%AD%BE.md)
    - [解析mappers标签](https://github.com/endue/MybatisNotes/blob/master/%E5%AE%B9%E5%99%A8%E5%88%9D%E5%A7%8B%E5%8C%96/%E8%A7%A3%E6%9E%90mappers%E6%A0%87%E7%AD%BE.md)
+   
+## 方法执行
+1. [insert方法](https://github.com/endue/MybatisNotes/blob/master/%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C/insert%E6%96%B9%E6%B3%95.md)
