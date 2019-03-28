@@ -16,3 +16,4 @@
    
 ## 方法执行
 1. [insert、update、delete方法](https://github.com/endue/MybatisNotes/blob/master/%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C/insert%E6%96%B9%E6%B3%95.md)
+2. [select方法](https://github.com/endue/MybatisNotes/blob/master/%E6%96%B9%E6%B3%95%E6%89%A7%E8%A1%8C/select%E6%96%B9%E6%B3%95.md)
