@@ -1,3 +1,4 @@
+**很多细节还需要研究,目前只是对大体流程有个概念**
 # mybatis
 ## 环境搭建
 1. [Demo](https://github.com/endue/MybatisNotes/tree/master/demo)
