@@ -130,8 +130,8 @@ private <E> List<E> queryFromDatabase(MappedStatement ms, Object parameter, RowB
 	return list;
 }
 ```
-这一步查询结果放入一级缓存,目的就是在同一个事务中,相同的调用同一个key时,结果可以从缓存中获取.调用方法
-在上一步调用的地方:list = resultHandler == null ? (List<E>) localCache.getObject(key) : null;
+这一步查询结果放入一级缓存,目的就是在同一个事务中,相同的调用同一个key时,结果可以从缓存中获取.详见FastResultSetHandler.getNestedQueryMappingValue方法
+ this.executor.deferLoad(nestedQuery, metaResultObject, property, key, targetType);
 
 - 继续走doQuery方法,在SimpleExecutor中
 ```
