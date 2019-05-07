@@ -254,6 +254,9 @@ public String handleToken(String content) {
 
 
 ***接口式方法调用mybatis帮我们把参数封装为map，而sqlSession方式的方法调用，需要我们自己封装参数***
+
+
+###### 对应参数的引用
 ```
   public DynamicContext(Configuration configuration, Object parameterObject) {
     if (parameterObject != null && !(parameterObject instanceof Map)) {
@@ -270,7 +273,7 @@ public String handleToken(String content) {
 2、如果是null则bindings中也是null
 3、将参数放到bindings中
 
-${...}形式的参数，在TextSqlNode中静态内部类
+${...}形式的参数，看TextSqlNode中静态内部类的代码
 ```
 private static class BindingTokenParser implements TokenHandler {
 
