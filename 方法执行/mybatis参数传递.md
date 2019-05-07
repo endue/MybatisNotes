@@ -106,7 +106,7 @@ public Object convertArgsToSqlCommandParam(Object[] args) {
 	则SortedMap<Integer, String> params中存储的就是:{0:'str',1:'1'}
 	遍历params获取对应的value,然后根据参数排序的位置，获取args中对应的值放到map中
 	并且还根据参数顺序存储了key为param1,param2的参数。
-	假如我们调用上面方法传入的参数是：20  张三 ，则params中存储的就是{'str':'20','1':'张三','param1':'20','param2':'张三'}
+	假如我们调用上面方法传入的参数是：20  张三 ，则param中存储的就是{'str':'20','1':'张三','param1':'20','param2':'张三'}
 	继续执行后面的内容和sqlSession方式的调用就一样了
 	
 ###### sqlSession式方法调用
