@@ -200,6 +200,21 @@ public BoundSql getBoundSql(Object parameterObject) {
 }
 ```
 
+```
+  public static final String PARAMETER_OBJECT_KEY = "_parameter";
+  public static final String DATABASE_ID_KEY = "_databaseId";
+
+  public DynamicContext(Configuration configuration, Object parameterObject) {
+    if (parameterObject != null && !(parameterObject instanceof Map)) {
+      MetaObject metaObject = configuration.newMetaObject(parameterObject);
+      bindings = new ContextMap(metaObject);
+    } else {
+      bindings = new ContextMap(null);
+    }
+    bindings.put(PARAMETER_OBJECT_KEY, parameterObject);
+    bindings.put(DATABASE_ID_KEY, configuration.getDatabaseId());
+  }
+```
 
 
 ```
@@ -261,6 +276,9 @@ public String handleToken(String content) {
 parameterObject就是我们自己封装的参数(sqlSession方法调用)或mybatis帮我们封装的参数(接口式方法调用)
 
 ```
+  public static final String PARAMETER_OBJECT_KEY = "_parameter";
+  public static final String DATABASE_ID_KEY = "_databaseId";
+  
   public DynamicContext(Configuration configuration, Object parameterObject) {
     if (parameterObject != null && !(parameterObject instanceof Map)) {
       MetaObject metaObject = configuration.newMetaObject(parameterObject);
@@ -301,6 +319,8 @@ private static class BindingTokenParser implements TokenHandler {
 ```
 1. 如果参数是null，则bindings中新增一个键值对，value是null
 2. 如果是基础数据类型等,则bindings中新增一个键值对，value是参数值
+
+***所以如果是一个参数，我们没有用@Param注解，则可以通过${value}或#{value}或${_parameter}或#{_parameter}方式调用。集合或数组需要用array或list***
 
 
 
