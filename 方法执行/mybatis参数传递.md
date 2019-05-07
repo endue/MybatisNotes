@@ -253,4 +253,4 @@ public String handleToken(String content) {
 对于sql中#{}形式的表达式，替换为占位符形式的?
 
 
-
+##接口式方法调用mybatis帮我们把参数封装为map，而sqlSession方式的方法调用，需要我们自己封装参数##
