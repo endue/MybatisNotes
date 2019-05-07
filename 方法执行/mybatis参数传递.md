@@ -257,6 +257,9 @@ public String handleToken(String content) {
 
 
 ###### 对应参数的引用
+
+parameterObject就是我们自己封装的参数(sqlSession方法调用)或mybatis帮我们封装的参数(接口式方法调用)
+
 ```
   public DynamicContext(Configuration configuration, Object parameterObject) {
     if (parameterObject != null && !(parameterObject instanceof Map)) {
