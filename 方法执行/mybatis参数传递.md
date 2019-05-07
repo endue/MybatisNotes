@@ -254,3 +254,47 @@ public String handleToken(String content) {
 
 
 ***接口式方法调用mybatis帮我们把参数封装为map，而sqlSession方式的方法调用，需要我们自己封装参数***
+```
+  public DynamicContext(Configuration configuration, Object parameterObject) {
+    if (parameterObject != null && !(parameterObject instanceof Map)) {
+      MetaObject metaObject = configuration.newMetaObject(parameterObject);
+      bindings = new ContextMap(metaObject);
+    } else {
+        = new ContextMap(null);
+    }
+    bindings.put(PARAMETER_OBJECT_KEY, parameterObject);
+    bindings.put(DATABASE_ID_KEY, configuration.getDatabaseId());
+  }
+```
+1、如果参数不是null并且不是map类型,创建包装类放到bindings中
+2、如果是null则bindings中也是null
+3、将参数放到bindings中
+
+${...}形式的参数，在TextSqlNode中静态内部类
+```
+private static class BindingTokenParser implements TokenHandler {
+
+	private DynamicContext context;
+
+	public BindingTokenParser(DynamicContext context) {
+		this.context = context;
+	}
+
+	public String handleToken(String content) {
+		Object parameter = context.getBindings().get("_parameter");
+		if (parameter == null) {
+			context.getBindings().put("value", null);
+		} else if (SimpleTypeRegistry.isSimpleType(parameter.getClass())) {
+			context.getBindings().put("value", parameter);
+		}
+		Object value = OgnlCache.getValue(content, context.getBindings());
+		return (value == null ? "" : String.valueOf(value)); // issue #274 return "" instead of "null"
+	}
+}
+
+```
+1、如果参数是null，则bindings中新增一个键值对，value是null
+2、如果是基础数据类型等,则bindings中新增一个键值对，value是参数值
+
+
+
