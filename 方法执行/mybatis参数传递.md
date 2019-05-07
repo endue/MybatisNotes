@@ -269,9 +269,9 @@ public String handleToken(String content) {
     bindings.put(DATABASE_ID_KEY, configuration.getDatabaseId());
   }
 ```
-1、如果参数不是null并且不是map类型,创建包装类放到bindings中
-2、如果是null则bindings中也是null
-3、将参数放到bindings中
+1. 如果参数不是null并且不是map类型,创建包装类放到bindings中
+2. 如果是null则bindings中也是null
+3. 将参数放到bindings中
 
 ${...}形式的参数，看TextSqlNode中静态内部类的代码
 ```
@@ -296,8 +296,8 @@ private static class BindingTokenParser implements TokenHandler {
 }
 
 ```
-1、如果参数是null，则bindings中新增一个键值对，value是null
-2、如果是基础数据类型等,则bindings中新增一个键值对，value是参数值
+1. 如果参数是null，则bindings中新增一个键值对，value是null
+2. 如果是基础数据类型等,则bindings中新增一个键值对，value是参数值
 
 
 
