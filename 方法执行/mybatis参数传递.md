@@ -320,7 +320,7 @@ private static class BindingTokenParser implements TokenHandler {
 1. 如果参数是null，则bindings中新增一个键值对，value是null
 2. 如果是基础数据类型等,则bindings中新增一个键值对，value是参数值
 
-***所以如果是一个参数，我们没有用@Param注解，没有自己封装到map中，则可以通过${value}或#{value}或${_parameter}或#{_parameter}方式调用。集合或数组需要用array或list***
+***所以如果是一个参数，我们没有用@Param注解，没有自己封装到map中，则可以通过${value}或#{value}或${_parameter}或#{_parameter}或${参数名}或#{参数名}方式调用。集合或数组需要用array或list***
 
 
 
